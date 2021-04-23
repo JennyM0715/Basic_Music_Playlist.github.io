@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link id="favicon" rel="icon" title="favicon" href="favicon.png" type="image/x-icon">
+    
+    <!------for some reason, not sure why but the favicon.ico wont display. I have used this
+         link format for favicon.ico on other pages before and it would display
+    <link id="favicon" rel="icon" title="favicon" href="favicon,ico" type="image/x-icon">--->
+    
+    <title>Basic Music Player</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!----https://code.jquery.com/
+                Under jQuery 3.x
+                    jQuery Core 3.6.0 (uncompressed)---->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    
+    <!---from Google Hosted Libraries
+            URL: https://developers.google.com/speed/libraries#jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!---entire page: header, main, footer, and the scripts at bottom-->
+    <!---this div class is primarily to make sure footer stays at bottom of the page-->
+    <div class="page">
+        <header>
+             <!---playlist title-->
+             <h1>Basic Music Playlist</h1>
+        </header>
+        <main>
+            <!---the playlist container: title, music bar, and tracks-->
+            <div class="entire-playlist-container">
+                <!---audio play music bar---->
+                <div class="audio_menu">
+                    <audio src="" preload="auto" controls type="audio/mpeg" 
+                    id="music_player" 
+                    style="width: -webkit-fill-available; margin: auto; display: block;">
+                        Sorry, your browser doesn't support html5!
+                    </audio>
+                </div>
+                <!-----song tracks container------>
+                <ul class="list-group" id="playlist">
+                    <!-----song tracks------>
+                    <li class="list-group-item"><a href="songs/Heat_Waves.mp3">Heat Waves</a><p>Glass Animals</p><p>3:58</p></li>
+                    <li class="list-group-item"><a href="songs/Fire_on_Fire.mp3">Fire on Fire</a><p>Sam Smith</p><p>3:37</p></li>
+                    <li class="list-group-item"><a href="songs/La_la_la.mp3">La la la</a><p>Naughty Boy ft. Sam Smith</p><p>3:52</p></li>
+                    <li class="list-group-item"><a href="songs/Astronaut_in_the_Ocean.mp3">Astronaut in the Ocean</a><p style="text-indent: -45px;">Masked Wolf</p><p>2:12</p></li>
+                    <li class="list-group-item"><a href="songs/GIRL_LIKE_ME.mp3">GIRL LIKE ME</a><p>Black Eyed Peas ft. Shakira</p><p>3:44</p></li>
+                    <li class="list-group-item"><a href="songs/The_Business.mp3">The Business</a><p>Tiësto</p><p>2:42</p></li>
+                    <li class="list-group-item"><a href="songs/Dance_('Til_You_Love_Someone_Else).mp3" style="width: 30%;">Dance ('Til You Love Someone Else)</a><p class="Sam_Smith_Dance_til_love_someone_else">Sam Smith</p><p>3:46</p></li>
+                    <li class="list-group-item"><a href="songs/Summer_Days.mp3">Summer Days</a><p style="width: 50%;">Martin Garrix ft. Macklemore & Patrick Stump of Fall Out Boy</p><p>2:43</p></li>
+                    <li class="list-group-item"><a href="songs/Bad_Habits.mp3">Bad Habits</a><p>Monsieur Adi ft. Verite</p><p>4:02</p></li>
+                </ul>  
+            </div>
+        </main>
+        <!-----footer------>
+        <footer id="footer">
+            <!---to get current year and have it automatically update copyright year -->
+            <!--instead of doing ti manually which would be hassle when working on multiple files-->
+            <p style="padding-top: .25rem;">Copyright &copy; <script>document.write(new Date().getFullYear())</script> </p>
+            <p>Basic Music Playlist | Jennifer Martinez </p>
+            <div style="color: white; text-align: center;">Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        
+        </footer>
+        <!--if you put the js script in the front (inside <head>), when
+            you click on a "track" then a new tab is opened and the music
+            plays instead of it playing in the same html page-->
+        <script src="music_player.js"></script>
+        <script>
+            // loads the audio player
+            music_player();
+        </script>
+    </div>
+</body>
+</html>

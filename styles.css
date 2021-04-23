@@ -1,0 +1,254 @@
+/*********************
+ * 
+ *  GLOBAL 
+ * 
+ *********************/
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family:'Times New Roman', Times, serif ;
+
+    /*URL to obtain this linear gradient: https://gradienta.io/unmatched-eclipse*/
+    background: linear-gradient(55deg, #212121 0%, #212121 40%, #323232 calc(40% + 1px), #323232 60%, #008F95 calc(60% + 1px), #008F95 70%, #14FFEC calc(70% + 1px), #14FFEC 100%);
+}
+
+.page{
+    position: relative;
+    min-height: 100vh;
+}
+
+/******************************
+ * 
+ *
+ *  the playlist container: 
+ *  title, music bar, and tracks
+ * 
+ ******************************/
+.entire-playlist-container{
+    padding: 15px;
+    border: 2px solid #ffbf00;  /*Amber*/
+    border-radius: 10px;
+    width: 800px;
+    height: 475px;
+    margin: 0 auto;
+    
+    margin-top: 2.6%;
+    /*from https://gradienta.io/*/
+    background: linear-gradient(123deg, #FFFCAC 0%, #FFFFFF 67%), linear-gradient(180deg, #D8D8D8 0%, #6B0000 100%), linear-gradient(142deg, #F9F5F0 0%, #F9F5F0 33%, #F2EAD3 calc(33% + 1px), #F2EAD3 56%, #F4991A calc(56% + 1px), #F4991A 62%, #321313 calc(62% + 1px), #321313 100%);
+    background-blend-mode: multiply, overlay, normal;   
+}
+.entire-playlist-container > .list-group{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 1px;
+}
+/******************************
+ * 
+ *
+ *          title 
+ *  [inside <header> tag]
+ * 
+ ******************************/
+h1{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 36px;
+    height: 75px;
+    
+    padding: 10px;
+    margin-bottom: revert;
+}
+/******************************
+ * 
+ *
+ *   tracks container
+ * 
+ ******************************/
+ .audio_menu{
+    margin: auto;
+    width: 700px;
+    margin-top: 3%;
+ }
+.list-group{
+    width: 700px;
+    margin: auto;
+}
+.list-group >li:hover{
+    border: 2px solid #0e3854;
+    background-color: #c1e6ff;
+}
+.list-group > li > a {
+    text-decoration: none;
+    color: black;
+}
+p{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.list-group-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Sam_Smith_Dance_til_love_someone_else{
+    text-indent: -35px;
+    position: absolute;
+    left: 32rem;
+}
+
+/******************************
+ * 
+ *
+ *          footer 
+ *  
+ * 
+ ******************************/
+#footer p{ 
+
+    color: white;
+    height: 30px;
+    text-align: center;
+    font-size: 10px;
+}
+footer{
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+/******************************
+ * 
+ *
+ *          Media queries 
+ *  
+ * 
+ ******************************/
+ /*Media queries are a popular technique for 
+delivering a tailored style sheet to different devices.*/
+
+/*source: https://www.w3schools.com/css/css3_mediaqueries_ex.asp*/
+
+
+ /*examples: 
+/* Set the background color of body to tan 
+body {
+    background-color: tan;
+  }
+  
+  /* On screens that are 992px or less, set the background color to blue 
+  @media screen and (max-width: 992px) {
+    body {
+      background-color: blue;
+    }
+  }
+  
+  /* On screens that are 600px or less, set the background color to olive 
+  @media screen and (max-width: 600px) {
+    body {
+      background-color: olive;
+    }
+  }
+*/
+@media screen and (max-width: 1020px){
+
+    .entire-playlist-container{
+        width: 750px;
+        height: 450px;
+        margin-top: 5%;
+    }
+    .audio_menu{
+        width: 650px;
+        margin-top: 2%;
+    }
+    .list-group{
+        width: 650px;
+    }
+
+    .Sam_Smith_Dance_til_love_someone_else{
+        position: absolute;
+        left: 30rem;
+    }
+}
+
+@media screen and (max-width: 967px){
+    .entire-playlist-container{
+        width: 700px;
+        height: 470px;
+        margin-top: 4.1%;
+    }
+
+    .audio_menu{
+        margin-top: 1%;
+        width: 600px;
+    }
+
+    .list-group {
+        width: 600px;
+        height: 400px;
+    }
+    .Sam_Smith_Dance_til_love_someone_else{
+        left: 27rem;
+    }
+}
+
+@media screen  and (max-width: 815px){
+    .entire-playlist-container{
+        width: 650px;
+        height: 475px;
+    }
+    .audio_menu{
+        width: 500px;
+    }
+
+    .list-group{
+        width: 500px;
+    }
+    .Sam_Smith_Dance_til_love_someone_else{
+        left: 23rem;
+    }
+}
+
+@media screen  and (max-width: 720px){
+    .entire-playlist-container{
+        width: 600px;
+        margin-top: 6%;
+        height: 475px;
+    }
+    .Sam_Smith_Dance_til_love_someone_else{
+        text-indent: -35px;
+        position: absolute;
+        left: 23rem;
+    }
+}
+
+@media screen  and (max-width: 690px){
+    .entire-playlist-container{
+        width: 450px;
+        margin-top: 7%;
+    }
+    .audio_menu{
+        width: 350px;
+    }
+
+    .list-group{
+        width: 350px;
+    }
+
+    p{
+        font-size: 11px;
+    }
+
+    .list-group > li > a {
+       
+        font-size: 11px;
+    }
+    .Sam_Smith_Dance_til_love_someone_else{
+        left: 17rem;
+    }
+}
