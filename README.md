@@ -32,4 +32,4 @@
 # Output
 
 * Click on the link below to view the Basic Music Playlist webpage
-    * [Basic Music Playlist](https://jennym0715.github.io/)
+    * [Basic Music Playlist](https://jennym0715.github.io/Basic_Music_Playlist.github.io/)
